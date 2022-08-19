@@ -1,0 +1,137 @@
+// https://github.com/brookhong/Surfingkeys/wiki/Migrate-your-settings-from-0.9.74-to-1.0
+const {
+    aceVimMap,
+    mapkey,
+    imap,
+    imapkey,
+    getClickableElements,
+    vmapkey,
+    map,
+    unmap,
+    unmapAllExcept,
+    vunmap,
+    cmap,
+    addSearchAlias,
+    removeSearchAlias,
+    tabOpenLink,
+    readText,
+    Clipboard,
+    Front,
+    Hints,
+    Visual,
+    RUNTIME
+} = api;
+
+unmapAllExcept([
+    'p','?',';ql','.',      // help
+    'gi','gf','[[',']]',';fs','O','f','C','i','I','<Ctrl-i>','q','w','cf','Q',         // Mouse click
+    // 'gi','gf','[[',']]',';fs','O','f','af','C','i','I','<Ctrl-i>','q','w','cf','Q',         // Mouse click
+    'e','d','gg','G',       // scroll page / element
+    'yt','yT','g0','g$','gxx','E','R','T',';gt','on','x','X','W','<<','>>',       // Tabs
+    //'yt','yT','g0','g$','gxx','E','R','T',';gt','zr','zi','zo','on','x','X','W','<<','>>',       // Tabs
+    'B','F','S','D',     // Page navigation
+    // 'B','F','S','D','r',     // Page navigation
+    'sg','sd','se','ss','sh','sy',      // Search selected with
+    'yv','yma','ya','yi','yy','yf','yd','cq','cc',';pf',     // Clipboard
+    ';e',';v',       // Settings
+    'ga','gb','gc','gd','gh','gk','ge','gn','gs',';i',';j',      // Chrome URLs
+    ';s',';t',       // Misc
+]);
+// unmap('<Ctrl-h>');  // history panel 
+// unmap('<Ctrl-j>');  // downloads panel 
+
+// disable find on google, so by default google '/' will go to search box
+if( /^(.*\.)?google\./.test(window.location.host) ){
+    unmap('/');
+}
+
+map('a', 'f');  // replace open link in current tab (f) with another letter (need to be at top - order matters)
+map('<Alt-shift-s>', '<Alt-s>');  // disable current site // alt s is mapped externally in browser to undo close tab
+map('w', 'cf');  // open multiple links in background tab (make it easier to press)
+map('r', 'E');  // previous tab  // overrides reload
+map('f', 'R');  // next tab  // overrides open link in current tab (f)
+
+mapkey('Q', '#1Click on an Image or a button in background, multiple', function () {
+    Hints.create("img, button", Hints.dispatchMouseClick, { multipleHits: true, tabbed: true, active: false });
+});
+
+mapkey(';j', '#12Close Downloads Shelf', function() {  // prevent default clearing history for download shelf https://github.com/brookhong/Surfingkeys/issues/1408
+    RUNTIME("closeDownloadsShelf");
+});
+// rarely use this though, only effect the popup menu close. gd - Open Chrome Downloads (but not the popup, no way to open popup in edge browser)
+
+
+// darkreader extension compatbility - hints visibility
+// https://github.com/brookhong/Surfingkeys/issues/1654
+api.Hints.style(
+    "padding: 1px; color:#efe1eb; background: none; background-color: #b16286"
+);
+api.Hints.style(
+    "div{color:#efe1eb; background: none; background-color: #e78a4e;} div.begin{color:#ea6962;}",
+    "text"
+);
+
+// set theme
+settings.theme = `
+.sk_theme {
+    font-family: Input Sans Condensed, Charcoal, sans-serif;
+    font-size: 10pt;
+    background: #24272e;
+    color: #abb2bf;
+}
+.sk_theme tbody {
+    color: #fff;
+}
+.sk_theme input {
+    color: #d0d0d0;
+}
+.sk_theme .url {
+    color: #61afef;
+}
+.sk_theme .annotation {
+    color: #56b6c2;
+}
+.sk_theme .omnibar_highlight {
+    color: #528bff;
+}
+.sk_theme .omnibar_timestamp {
+    color: #e5c07b;
+}
+.sk_theme .omnibar_visitcount {
+    color: #98c379;
+}
+.sk_theme #sk_omnibarSearchResult ul li:nth-child(odd) {
+    background: #303030;
+}
+.sk_theme #sk_omnibarSearchResult ul li.focused {
+    background: #3e4452;
+}
+#sk_status, #sk_find {
+    font-size: 20pt;
+}`;
+// click `Save` button to make above settings to take effect.</ctrl-i></ctrl-y>
+
+
+//
+// default help reference
+//
+
+// an example to create a new mapping `ctrl-y`
+// mapkey('<ctrl-y>', 'Show me the money', function() {
+//     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
+// });
+
+// an example to replace `T` with `gt`, click `Default mappings` to see how `T` works.
+//map('gt', 'T');
+
+// an example to remove mapkey `Ctrl-i`
+//unmap('<ctrl-i>');
+
+// disable all keys except 
+// unmapAllExcept("?")
+// unmapAllExcept(['f','?']);
+//iunmap('<'); // to remove Ctrl-i mapping in insert mode
+
+// only keep E, R and T from Surfingkeys for gmail.com and twitter.com
+//unmapAllExcept(['E','R','T'], /gmail.com|twitter.com/);
+
