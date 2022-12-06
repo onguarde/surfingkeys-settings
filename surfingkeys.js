@@ -24,7 +24,7 @@ const {
 
 unmapAllExcept([
     'p','?',';ql','.',      // help
-    'gi','gf','[[',']]',';fs','O','f','C','i','I','<Ctrl-i>','q','w','cf','Q',         // Mouse click
+    'gi','gf','[[',']]',';fs','O','f','af','C','i','I','<Ctrl-i>','q','w','cf',         // Mouse click
     // 'gi','gf','[[',']]',';fs','O','f','af','C','i','I','<Ctrl-i>','q','w','cf','Q',         // Mouse click
     'e','d','gg','G',       // scroll page / element
     'yt','yT','g0','g$','gxx','E','R','T',';gt','on','x','X','W','<<','>>',       // Tabs
@@ -45,15 +45,30 @@ if( /^(.*\.)?google\./.test(window.location.host) ){
     unmap('/');
 }
 
-map('a', 'f');  // replace open link in current tab (f) with another letter (need to be at top - order matters)
-map('<Alt-shift-s>', '<Alt-s>');  // disable current site // alt s is mapped externally in browser to undo close tab
-map('w', 'cf');  // open multiple links in background tab (make it easier to press)
-map('r', 'E');  // previous tab  // overrides reload
-map('f', 'R');  // next tab  // overrides open link in current tab (f)
 
-mapkey('Q', '#1Click on an Image or a button in background, multiple', function () {
-    Hints.create("img, button", Hints.dispatchMouseClick, { multipleHits: true, tabbed: true, active: false });
-});
+// open 1 link (and close hints)
+map('w', 'f');  // open 1 link in current tab (f)
+map('W', 'q');  // open 1 image link in current tab (q)
+
+// open 1 link in background (and close hints)
+map('q', 'gf');  // open 1 link in background tab (gf/C)
+// (??) open 1 image link in background tab (skipped rarely used)
+
+// open multiple links (don't close hints)
+map('a', 'cf');  // open links in background tab (cf)
+// open multiple image links in background tab (in development - doesn't work) (skipped rarely used)
+// mapkey('A', '#1Click on an Image or a button in background, multiple', function () {
+//     Hints.create("img, button", Hints.dispatchMouseClick, { multipleHits: true, tabbed: true, active: false });
+// });
+
+map('f', 'd');  // scroll page down
+map('d', 'e');  // scroll page up
+
+map('e', 'E');  // previous tab  // overrides reload
+map('r', 'R');  // next tab  // overrides open link in current tab (f)
+
+map('<Alt-shift-s>', '<Alt-s>');  // disable current site // alt s is mapped externally in browser to undo close tab
+
 
 mapkey(';j', '#12Close Downloads Shelf', function() {  // prevent default clearing history for download shelf https://github.com/brookhong/Surfingkeys/issues/1408
     RUNTIME("closeDownloadsShelf");
