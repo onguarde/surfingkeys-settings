@@ -1,0 +1,42 @@
+.tab-icon-sound-label {
+    display: none !important;
+}
+/* hide playing, autoplay blocked, in tab bar annoying. */
+
+
+/* #TabsToolbar { visibility: collapse; }  */
+/*  hide tabs, when using with tree style tabs or sideberry */
+
+
+
+/* section one
+dynamically hide the tab bar when sideberry is enabled 
+
+Prerequisite,
+Set window preface value:
+Sidebery settings > Help > Preface value
+note: in this example: XXX
+note: value can be an "empty" unicode sign
+*/
+
+/* this makes it, thinner, like chrome's */
+#main-window #TabsToolbar {
+  height: 29px !important;
+  overflow: hidden;
+  transition: height .3s .3s !important;
+}
+
+/* this hides the tab bar totally, if sideberry sidebar is activated, by checking the window title, which is prefixed with "Sidebery" as configured */
+#main-window[titlepreface*="[Sidebery] "] #TabsToolbar {
+  /* height: 0 !important; */
+  visibility: collapse;
+}
+
+/* not sure what this does, disabled, maybe it targets old version of firefox */
+/*
+#main-window[titlepreface*="[Sidebery] "] #tabbrowser-tabs {
+  z-index: 0 !important;
+}
+*/
+
+/* section one end */
