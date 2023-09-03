@@ -281,13 +281,11 @@
             "_iVWYuNMybC-"
         ]
     },
-    "sidebarCSS": "#root.root {--active-el-overlay-clicked-bg: rgba(255,255,255,0.141);}\n#root.root {--active-el-bg: rgba(255,255,255,0.141);}\n#root.root {--toolbar-el-overlay-active-border: rgba(255,255,255,0);}\n#root.root {--toolbar-bg: #323232;}\n#root.root {--frame-fg: #878e92;}\n#root.root {--toolbar-fg: #878e92 ;}\n#root.root {--nav-btn-fg: #878e92 ;}\n#root.root {--tabs-progress-bg: rgba(255,255,255,0.086);}\n#root.root {--tabs-activated-bg: rgba(255,255,255,0.141) ;}\n#root.root {--d-fast: 0.12s;}\n#root.root {--active-el-fg: #fff;}\n#root.root {--tabs-activated-fg: #878e92;}\n#root.root {--frame-bg: #1e1f20;}",
+    "sidebarCSS": "#root.root {--active-el-overlay-clicked-bg: rgba(255,255,255,0.141);}\n#root.root {--active-el-bg: rgba(255,255,255,0.141);}\n#root.root {--toolbar-el-overlay-active-border: rgba(255,255,255,0);}\n#root.root {--toolbar-bg: #323232;}\n#root.root {--frame-fg: #878e92;}\n#root.root {--toolbar-fg: #878e92 ;}\n#root.root {--nav-btn-fg: #878e92 ;}\n#root.root {--tabs-progress-bg: rgba(255,255,255,0.086);}\n#root.root {--tabs-activated-bg: rgba(255,255,255,0.141) ;}\n#root.root {--d-fast: 0.12s;}\n#root.root {--active-el-fg: #fff;}\n#root.root {--tabs-activated-fg: #878e92;}\n#root.root {--frame-bg: #1e1f20;}\n/* hide the blue unread tab icon, just finished loading \nhttps://github.com/mbnuqw/sidebery/issues/712 */\n.Tab[data-updated=\"true\"] .fav .update-badge {\n  display: none;\n}\n.Tab[data-updated=\"true\"] .fav img,\n.Tab[data-updated=\"true\"] .fav svg {\n  mask: none;\n}\n\n",
     "ver": "5.0.0rc4",
     "keybindings": {
         "_execute_sidebar_action": "F1",
-        "new_tab_as_first_child": "Alt+T",
-        "fold_branch": "Alt+W",
-        "expand_branch": "Alt+R",
+        "new_tab_as_first_child": "Ctrl+Shift+F12",
         "create_snapshot": "F4",
         "search": "F2"
     }
