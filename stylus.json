@@ -1,0 +1,375 @@
+[
+  {
+    "settings": {
+      "openEditInWindow": false,
+      "openEditInWindow.popup": false,
+      "windowPosition": {},
+      "show-badge": false,
+      "disableAll": false,
+      "exposeIframes": false,
+      "exposeStyleName": false,
+      "newStyleAsUsercss": false,
+      "styleViaXhr": false,
+      "patchCsp": false,
+      "urlInstaller": true,
+      "config.autosave": true,
+      "schemeSwitcher.enabled": "dark",
+      "schemeSwitcher.nightStart": "18:00",
+      "schemeSwitcher.nightEnd": "06:00",
+      "popup.breadcrumbs": true,
+      "popup.breadcrumbs.usePath": false,
+      "popup.enabledFirst": true,
+      "popup.stylesFirst": true,
+      "popup.autoResort": false,
+      "popup.borders": false,
+      "popup.findSort": "u",
+      "manage.onlyEnabled": false,
+      "manage.onlyLocal": false,
+      "manage.onlyUsercss": false,
+      "manage.onlyEnabled.invert": false,
+      "manage.onlyLocal.invert": false,
+      "manage.onlyUsercss.invert": false,
+      "manage.actions.expanded": true,
+      "manage.backup.expanded": true,
+      "manage.filters.expanded": true,
+      "manage.minColumnWidth": 750,
+      "manage.newUI": true,
+      "manage.newUI.favicons": false,
+      "manage.newUI.faviconsGray": true,
+      "manage.newUI.targets": 3,
+      "manage.newUI.sort": "title,asc",
+      "editor.options": {},
+      "editor.toc.expanded": true,
+      "editor.options.expanded": true,
+      "editor.lint.expanded": true,
+      "editor.publish.expanded": true,
+      "editor.lineWrapping": true,
+      "editor.smartIndent": true,
+      "editor.indentWithTabs": false,
+      "editor.tabSize": 4,
+      "editor.keyMap": "sublime",
+      "editor.theme": "default",
+      "editor.beautify": {
+        "end_with_newline": false,
+        "indent_conditional": true,
+        "newline_after_open_brace": true,
+        "newline_before_close_brace": true,
+        "newline_before_open_brace": false,
+        "newline_between_properties": true,
+        "newline_between_rules": false,
+        "preserve_newlines": true,
+        "selector_separator_newline": true
+      },
+      "editor.beautify.hotkey": "",
+      "editor.lintDelay": 300,
+      "editor.linter": "csslint",
+      "editor.lintReportDelay": 500,
+      "editor.matchHighlight": "token",
+      "editor.autoCloseBrackets": true,
+      "editor.autocompleteOnTyping": false,
+      "editor.contextDelete": false,
+      "editor.selectByTokens": true,
+      "editor.arrowKeysTraverse": true,
+      "editor.appliesToLineWidget": true,
+      "editor.autosaveDraft": 10,
+      "editor.livePreview": true,
+      "editor.colorpicker": true,
+      "editor.colorpicker.hexUppercase": false,
+      "editor.colorpicker.hotkey": "",
+      "editor.colorpicker.color": "",
+      "editor.colorpicker.maxHeight": 300,
+      "hotkey._execute_browser_action": "",
+      "hotkey.openManage": "",
+      "hotkey.styleDisableAll": "",
+      "sync.enabled": "google",
+      "iconset": 0,
+      "badgeDisabled": "#8B0000",
+      "badgeNormal": "#006666",
+      "headerWidth.edit": 280,
+      "headerWidth.install": 280,
+      "headerWidth.manage": 280,
+      "popupWidth": 246,
+      "updateInterval": 24
+    },
+    "order": {
+      "main": [],
+      "prio": []
+    }
+  },
+  {
+    "enabled": false,
+    "updateUrl": "https://raw.githubusercontent.com/33kk/uso-archive/flomaster/data/usercss/146704.user.css",
+    "url": "https://33kk.github.io/uso-archive/?style=146704",
+    "installDate": 1619582742623,
+    "sections": [
+      {
+        "code": "#hot-network-questions, /* not related to your work */\n.module.community-bulletin, /* never mind what's up on Meta */\n#chat-feature, /* no wasting your time in a semi-related chatroom */\n#footer-sites /* seriously, stop lookin gfor ways to waste your time */\n{\n  display: none;\n}\n\n/* Ads to join the site. */\n#herobox, .s-hero { display: none; }\n\n/* Ads for products. */\n.ad, .ad-container { display: none; }",
+        "start": 829,
+        "domains": [
+          "superuser.com",
+          "stackoverflow.com",
+          "stackexchange.com"
+        ]
+      }
+    ],
+    "sourceCode": "/* ==UserStyle==\n@name           (Unused) Undistractify StackOverflow Enhanced\n@namespace      USO Archive\n@author         pmer\n@description    `Remove all the distracting stuff (other sites, chat rooms, meta posts, ads) from your vision, focusing in on resolving your technical problems first.Based on hardy tom’s original <a href=\"https://userstyles.org/styles/110637/undistractify-stackoverflow\">Undistractify StackOverflow</a> but adds removal of simple sidebar ads along with requests to join the site (for when you're signed out & don't want to bother signing in). Also adds more StackExchange domains that this style will apply to.`\n@version        20170817.3.3\n@license        CC0-1.0\n@preprocessor   uso\n==/UserStyle== */\n@-moz-document domain(\"superuser.com\"), domain(\"stackoverflow.com\"), domain(\"stackexchange.com\") {\n#hot-network-questions, /* not related to your work */\n.module.community-bulletin, /* never mind what's up on Meta */\n#chat-feature, /* no wasting your time in a semi-related chatroom */\n#footer-sites /* seriously, stop lookin gfor ways to waste your time */\n{\n  display: none;\n}\n\n/* Ads to join the site. */\n#herobox, .s-hero { display: none; }\n\n/* Ads for products. */\n.ad, .ad-container { display: none; }\n\n}",
+    "usercssData": {
+      "name": "(Unused) Undistractify StackOverflow Enhanced",
+      "namespace": "USO Archive",
+      "author": "pmer",
+      "description": "Remove all the distracting stuff (other sites, chat rooms, meta posts, ads) from your vision, focusing in on resolving your technical problems first.Based on hardy tom’s original <a href=\"https://userstyles.org/styles/110637/undistractify-stackoverflow\">Undistractify StackOverflow</a> but adds removal of simple sidebar ads along with requests to join the site (for when you're signed out & don't want to bother signing in). Also adds more StackExchange domains that this style will apply to.",
+      "version": "20170817.3.3",
+      "license": "CC0-1.0",
+      "preprocessor": "uso"
+    },
+    "author": "pmer",
+    "description": "Remove all the distracting stuff (other sites, chat rooms, meta posts, ads) from your vision, focusing in on resolving your technical problems first.Based on hardy tom’s original <a href=\"https://userstyles.org/styles/110637/undistractify-stackoverflow\">Undistractify StackOverflow</a> but adds removal of simple sidebar ads along with requests to join the site (for when you're signed out & don't want to bother signing in). Also adds more StackExchange domains that this style will apply to.",
+    "name": "(Unused) Undistractify StackOverflow Enhanced",
+    "installationUrl": "https://33kk.github.io/uso-archive/?style=146704",
+    "originalDigest": "1c4d660305a949da121f882650be288ef4097e9f",
+    "_id": "18ced6ca-c6b9-46a4-a9f3-87156a68ae8d",
+    "_rev": 1677578271409,
+    "id": 1,
+    "etag": "W/\"c432ddb73c53584abb2312f4d1520d73a19c166a6c69c8ab108c93a87501842a\"",
+    "updateDate": 1620209046373
+  },
+  {
+    "enabled": false,
+    "updateUrl": "https://raw.githubusercontent.com/33kk/uso-archive/flomaster/data/usercss/161312.user.css",
+    "url": "https://33kk.github.io/uso-archive/?style=161312",
+    "installDate": 1619582944312,
+    "sections": [
+      {
+        "code": "#left-sidebar {\n    display: none; \n}\n\n#sidebar {\n    display: none; \n}\n\n#footer {\n  display: none;\n}\n\n.started {\n  display: none;\n}\n\n.pl8 {\n    display: none;\n}\n\n#mainbar {\n    width: 100%;\n}",
+        "start": 323,
+        "domains": [
+          "stackoverflow.com"
+        ]
+      }
+    ],
+    "sourceCode": "/* ==UserStyle==\n@name           (Unused) Remove sidebars and footer.\n@namespace      USO Archive\n@author         Alejandro Ramirez\n@description    `Remove sidebars and footer.`\n@version        20180613.18.25\n@license        NO-REDISTRIBUTION\n@preprocessor   uso\n==/UserStyle== */\n@-moz-document domain(stackoverflow.com) {\n\n#left-sidebar {\n    display: none; \n}\n\n#sidebar {\n    display: none; \n}\n\n#footer {\n  display: none;\n}\n\n.started {\n  display: none;\n}\n\n.pl8 {\n    display: none;\n}\n\n#mainbar {\n    width: 100%;\n}\n\n}",
+    "usercssData": {
+      "name": "(Unused) Remove sidebars and footer.",
+      "namespace": "USO Archive",
+      "author": "Alejandro Ramirez",
+      "description": "Remove sidebars and footer.",
+      "version": "20180613.18.25",
+      "license": "NO-REDISTRIBUTION",
+      "preprocessor": "uso"
+    },
+    "author": "Alejandro Ramirez",
+    "description": "Remove sidebars and footer.",
+    "name": "(Unused) Remove sidebars and footer.",
+    "installationUrl": "https://33kk.github.io/uso-archive/?style=161312",
+    "originalDigest": "4f49d332e8024c0e5cd4d39e95b9228cf07856e9",
+    "_id": "fd50cd3d-78e0-48ae-abdf-93b907c24c06",
+    "_rev": 1677578271483,
+    "id": 2,
+    "etag": "W/\"13a59d6581f06ffb0fb844680bda568c631cb819f2cd9da4c299df73502a18b4\"",
+    "updateDate": 1620208996296
+  },
+  {
+    "enabled": true,
+    "installDate": 1619583275470,
+    "name": "StackExchange Focus mode (No sidebars)",
+    "sections": [
+      {
+        "code": "#sidebar {\n    display:                none !important;\n}\n#mainbar, .mainbar, #questions, .question-summary, #answers, .answer {\n    min-width:              728px !important;\n    width:                  50% !important;\n}\n.summary {\n    min-width:              630px !important;\n    width:                  calc(100% - 120px) !important;\n}\n.question > table {\n    width:                  100% !important;\n}\n.post-text, .wmd-preview, .post-editor, .wmd-input {\n    min-width:              660px !important;\n    width:                  100% !important;\n}\n.wmd-button-bar {\n    min-width:              634px !important;\n    width:                  100% !important;\n}\n\n#footer {\n    display:                none !important;\n}\n.site-header--container  {\n    display:                none !important;\n}\n.js-dismissable-hero  {\n    display:                none !important;\n}\n#left-sidebar {\n    display:                none !important;\n}",
+        "domains": [
+          "askubuntu.com",
+          "mathoverflow.net",
+          "serverfault.com",
+          "stackapps.com",
+          "stackexchange.com",
+          "stackoverflow.com",
+          "superuser.com"
+        ]
+      }
+    ],
+    "updateDate": 1677597770608,
+    "_id": "91e5d93f-462a-4755-9797-7d24acf20934",
+    "_rev": 1677680090102,
+    "_usw": {
+      "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdHlsZUlEIjo4NzYzLCJ1c2VySUQiOjgxNTd9.WX1i_GC4rk1vDvfDgKhUX5qcfDDH1MwMhlyEOtJyiU4f67df5m0fcOBvf89jVVp2LonqT5W7oXRtN8nPDAR8eA",
+      "category": "domain(\"askubuntu.com\"), domain(\"mathoverflow.net\"), domain(\"serverfault.com\"), domain(\"stackapps.com\"), domain(\"stackexchange.com\"), domain(\"stackoverflow.com\"), domain(\"superuser.com\")",
+      "created_at": "2023-02-28T11:07:15.88448732Z",
+      "description": "This script hides ANYTHING distracting. eg. chat rooms, network questions, linked answers, banners. Let me know if I missed anything.\r\n\r\nWorks on all stackexchange sites not just stackoverflow.",
+      "display_name": "",
+      "homepage": "",
+      "id": 8763,
+      "license": "No License",
+      "mirror_url": "",
+      "name": "Stackexchange Focus Hide All Distractions",
+      "notes": "",
+      "original": "",
+      "preview_url": "",
+      "updated_at": "2023-02-28T11:07:15.88448732Z",
+      "user_id": 8157,
+      "username": "tinker"
+    },
+    "id": 3
+  },
+  {
+    "enabled": false,
+    "installDate": 1619594179641,
+    "name": "(Unused) Hide sidebar totally (simple)",
+    "sections": [
+      {
+        "code": ".community-bulletin a[href^='http://meta.'] { display: none; }\n",
+        "domains": [
+          "askubuntu.com",
+          "mathoverflow.net",
+          "serverfault.com",
+          "stackapps.com",
+          "stackexchange.com",
+          "stackoverflow.com",
+          "superuser.com"
+        ]
+      }
+    ],
+    "updateDate": 1620209033222,
+    "_id": "42c452b5-bc4e-44c7-8174-5a6a2fb34295",
+    "_rev": 1677578271487,
+    "id": 4
+  },
+  {
+    "enabled": false,
+    "installDate": 1620024410848,
+    "name": "SO hide all except linked (James Lu)",
+    "sections": [
+      {
+        "code": "#hireme,\n/* Hides the Looking for a Job module from the sidebar */\n #sidebar > :first-child,\n/*Hides the Community Bulletin module from the sidebar*/\n .s-sidebarwidget,\n/* Hides Stack Overflow Blog, Featured on Meta, Hot Meta Posts */\n #sidebar #chat-feature,\n/* Hides the Chat module from the sidebar */\n #sidebar #newsletter-ad, #left-sidebar,\n/* Hides the \"Love This Site?\" (weekly newsletter) module from the sidebar */\n #footer, .js-dismissable-hero,\n/* Hides the Hero box, asking to sign up for new users. */\n .site-header--container,\n/* Hides the top title banner bar appearing only in some stackexchange sites. */\n #hot-network-questions\n/* Hides hot network questions. */\n  {\n    display: none;\n  }",
+        "domains": [
+          "stackoverflow.com",
+          "stackexchange.com",
+          "superuser.com",
+          "serverfault.com",
+          "askubuntu.com"
+        ]
+      }
+    ],
+    "updateDate": 1620024410848,
+    "_id": "77f9d872-c7b0-4be5-8412-07a5a31389a5",
+    "_rev": 1677578271487,
+    "id": 6
+  },
+  {
+    "enabled": false,
+    "installDate": 1620027486844,
+    "name": "(Unused) DDG Like google (top sidebar darkmode ugly)",
+    "sections": [
+      {
+        "code": ".svg .logo_homepage\n  {\n    background-image: url(\"https://i.imgur.com/s29uVFj.png\");\n    width: 100%;\n    background-size: 100% auto;\n    background-position: bottom center;\n  }\n\n  .logo-wrap--home\n  {\n    max-width: 634px;\n    width: 70%;\n  }\n\n  .svg .header__logo\n  {\n    background-image: url(\"https://i.imgur.com/NDQCUrS.png\") !important;\n    background-size: 64px 64px !important;\n    width: 120px!important;\n    height: 60px!important;\n    margin-top: -10px!important;\n    margin-left: -5px!important;\n  }\n\n  .zcm__link\n  {\n    height: 15px;\n    line-height: 15px;\n    padding: 8px 8px 12px;\n    -webkit-font-smoothing: unset!important;\n    font-weight: 400!important;\n    color: #777!important;\n  }\n\n  .zcm-wrap--header\n  {\n    margin-left: -5px!important;\n  }\n\n  .dropdown__button\n  {\n    color: #777!important;\n  }\n\n  .header--aside__msg,\n.header--aside__twitter\n  {\n    display: none!important;\n  }\n\n  .feedback-btn\n  {\n    display: none!important;\n  }\n\n  .header__button--menu\n  {\n    margin-top: -25px!important;\n  }\n/*.result__check {\n    display:block!important;\n}*/\n\n  body\n  {\n    background: white !important;\n    font-family: arial, sans-serif;\n    color: #222;\n  }\n\n  .header__logo-wrap\n  {\n    margin-left: 20px;\n    width: 120px;\n  }\n\n  .module\n  {\n    margin-left: 0px;\n  }\n\n  .module__body\n  {\n    border-bottom: solid 1px #ebebeb;\n    padding-bottom: 25px;\n  }\n\n  .module--about__img\n  {\n    padding-left: 0px;\n    padding-bottom: 0px;\n  }\n\n  .module__title\n  {\n    font-size: 19px;\n    color: rgba(0, 0, 0, .87);\n    line-height: 1.2;\n    font-family: arial, sans-serif-light, sans-serif;\n    font-weight: normal;\n    text-align: left;\n  }\n\n  .module__text\n  {\n    line-height: 1.24;\n    font-size: 13px;\n    text-align: left;\n    color: #222;\n  }\n\n  .module__more-at js-about-module-more-at-inline\n  {\n    color: red;\n  }\n\n  .about-info-box\n  {\n    padding-top: 20px;\n  }\n\n  .about-info-box__info-row\n  {\n    border-top: none;\n  }\n\n  .about-info-box__info-label\n  {\n    font-size: 13px;\n    text-align: left;\n    color: #222;\n  }\n\n  .about-info-box__info-value\n  {\n    line-height: 1.24;\n    font-size: 13px;\n    text-align: left;\n    color: #222;\n  }\n\n  .header__search\n  {\n    padding-left: 56px;\n    min-width: 634px;\n  }\n\n  #search_form_homepage,\n#search_form\n  {\n    /*box-shadow: 0px 1.5px 2px .5px lightgray !important;*/\n    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08)!important;\n    background-color: white !important;\n    border-radius: 1.5px !important;\n    transition: all 200ms !important;\n    font-size: 100% !important;\n    border: 0px!important;\n  }\n\n  #search_form_homepage:hover,\n#search_form:hover,\n#search_form_homepage:focus,\n#search_form:focus,\n.search__autocomplete\n  {\n    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08)!important;\n    /*border: 1px solid rgba(0,0,0,0.15);*/;\n  }\n\n  #search_button_homepage,\n#search_form_input_clear\n  {\n    opacity: 0 !important;\n    transition: all 500ms !important;\n  }\n\n  #search_button_homepage:hover,\n#search_form_input_clear:hover,\n#search_button\n  {\n    opacity: 1 !important;\n    background-color: white !important;\n    color: #4285F4 !important;\n    border-top: 1px solid rgba(0, 0, 0, 0.15);\n    border-bottom: 1px solid rgba(0, 0, 0, 0.15);\n    border-right: 1px solid rgba(0, 0, 0, 0.15);\n  }\n\n  .zcm\n  {\n    padding-top: 17px;\n    color: #666;\n    font-size: 13px;\n    outline: none;\n    font-family: arial, sans-serif;\n  }\n\n  .zcm-wrap\n  {\n    padding-left: 150px;\n  }\n\n  .zcm__link.is-active\n  {\n    color: #4285F4 !important;\n    border-bottom-color: #4285F4 !important;\n    font-weight: bold !important;\n    border-bottom: solid 3px #de5833;\n  }\n\n  .zcm__link.is-highlighted,\n.zcm__link:focus\n  {\n    color: #4285F4 !important;\n  }\n\n  .header-wrap\n  {\n    border-top-width: 0px !important;\n    background-color: #FAFAFA !important;\n    box-shadow: 0px 1px 0px #EBEBEB !important;\n  }\n\n  #header_wrapper\n  {\n    min-height: 105px;\n  }\n\n  #header\n  {\n    min-height: 105px;\n  }\n\n  #duckbar\n  {\n    min-height: 58px;\n  }\n\n  #links_wrapper\n  {\n    padding-left: 150px;\n  }\n\n  .result__title\n  {\n    font-size: 18px;\n    margin: 0;\n    padding: 0;\n    font-family: arial, sans-serif;\n    line-height: 1.2;\n    text-align: left;\n    color: #1a0dab;\n    padding-bottom: 2px;\n  }\n\n  .result__snippet\n  {\n    margin: 0;\n    padding: 0;\n    font-size: small;\n    color: #494949;\n  }\n\n  .result__icon\n  {\n    display: none;\n  }\n\n  .result__url\n  {\n    font-size: 14px;\n    color: #006621;\n    font-style: normal;\n    line-height: 16px;\n    font-weight: normal;\n  }\n\n  a.result__a\n  {\n    font-weight: normal;\n    color: #1a0dab;\n  }\n\n  a.result__a:visited\n  {\n    font-weight: normal;\n    color: #660099;\n  }\n\n  b\n  {\n    font-weight: normal;\n  }\n\n  .msg__line\n  {\n    color: #dd4b39;\n    font-size: 18px;\n  }\n\n  .js-spelling-suggestion-link\n  {\n    color: #1a0dab;\n    font-size: 18px;\n    cursor: pointer;\n    font-weight: bolder;\n    font-style: italic;\n  }\n\n  .msg__line--small\n  {\n    font-size: 0.9em;\n    color: #333;\n  }\n\n  .result\n  {\n    margin-bottom: 0.5em;\n  }\n\n  .result.highlight\n  {\n    background-color: white !important;\n  }\n\n  .header--aside\n  {\n    padding-top: 20px;\n  }\n\n  .header--aside__msg\n  {\n    padding-top: 20px;\n  }\n\n  .module--news\n  {\n    margin-left: 0px !important;\n  }\n\n  .cw\n  {\n    max-width: 100%;\n  }\n/*\n.result__extras\n{\n\n}\n*/;",
+        "domains": [
+          "duckduckgo.com"
+        ]
+      }
+    ],
+    "updateDate": 1620209023486,
+    "_id": "f74db684-a46c-49c1-b794-7a7c3b6bb427",
+    "_rev": 1677578271487,
+    "id": 7
+  },
+  {
+    "enabled": false,
+    "installDate": 1620208445375,
+    "name": "(unused) DDG clean",
+    "sections": [
+      {
+        "code": "/* Hides footer */\n.footer element.style {\n    display: none\n}\n/* does not work - because it has embedded style element on the node. */",
+        "urls": [
+          "duckduckgo.com"
+        ]
+      }
+    ],
+    "updateDate": 1620695471412,
+    "_id": "2641d214-f98e-4c87-b0a6-78491470182e",
+    "_rev": 1677578271487,
+    "id": 8
+  },
+  {
+    "enabled": false,
+    "updateUrl": "https://userstyles.org/styles/chrome/39502.json",
+    "md5Url": "https://update.userstyles.org/39502.md5",
+    "url": "http://userstyles.org/styles/39502",
+    "originalMd5": false,
+    "installDate": 1646618710673,
+    "sections": [
+      {
+        "code": "/* can import but if already exist don't have to  */\n/*@import url(\"https://fonts.googleapis.com/css2?family=Fira+Code:wght@450&display=swap\"); */\n\npre, code, .blob-code, .blob-code-marker {\n  font-family: 'Noto Sans', monospace !important;\n}",
+        "domains": [
+          "github.com"
+        ]
+      }
+    ],
+    "name": "GitHub - a different font stack for code listings",
+    "originalDigest": "68dff117796af5c27fd65c01105df1f376aef977",
+    "_id": "1a2dc63f-6e0f-461e-9bde-22bd8ec6b210",
+    "_rev": 1677681964139,
+    "updateDate": 1652755172590,
+    "id": 9,
+    "installationUrl": "https://userstyles.org/styles/39502"
+  },
+  {
+    "enabled": false,
+    "installDate": 1646883341725,
+    "name": "google hide spellcheck red squiggly lines",
+    "sections": [
+      {
+        "code": "/*\nThe Google Search page has its own spellchecker, which applies to any text you\nenter into the search box. Like all spellcheckers, it's a useless pile of shit.\nI haven't found any way to turn it off, or even much confirmation of its\nexistence.\nThe page loads a script that sends the content of the search box to Google's\nservers whenever you type something into it. This enables Google to perform\nautocompletion and spellchecking. If Google thinks you've misspelled something,\nthe script will insert a span element with the CSS class \"gsc_b\" into the input\nbox.\nThis span has a CSS background-image, which is a Base64-encoded GIF of a red\nsquiggle. The red squiggle only appears when the input box is focused and the\nuser has typed something. Clicking away causes it to disappear.\nPresumably, the \"gsc\" in \"gsc_b\" stands for \"Google spell check\" or something\nlike that. The red squiggle can be hidden by overriding the CSS style so it\nis not displayed by the browser.\n*/\nspan.gsc_b {\n  display: none;\n}",
+        "domains": [
+          "www.google.com"
+        ]
+      }
+    ],
+    "updateDate": 1684243594781,
+    "_id": "d2345919-b07f-4077-96b3-d638607a8170",
+    "_rev": 1684243594781,
+    "id": 10
+  },
+  {
+    "enabled": false,
+    "installDate": 1677594468145,
+    "name": "StackExchange Focus mode (with Linked questions)",
+    "sections": [
+      {
+        "code": "\n/* hides all distractions except linked questions */\n/* https://meta.stackoverflow.com/a/407237/1807877 */\n/* https://meta.stackoverflow.com/questions/407190/focus-mode-hide-everything-sidebar-footer-except-linked-questions/407191#407191 */\n\n\n#hireme,\n/* Hides the Looking for a Job module from the sidebar */\n #sidebar > :first-child,\n/*Hides the Community Bulletin module from the sidebar*/\n .s-sidebarwidget,\n/* Hides Stack Overflow Blog, Featured on Meta, Hot Meta Posts */\n #sidebar #chat-feature,\n/* Hides the Chat module from the sidebar */\n #sidebar #newsletter-ad, #left-sidebar,\n/* Hides the \"Love This Site?\" (weekly newsletter) module from the sidebar */\n #footer, .js-dismissable-hero,\n/* Hides the Hero box, asking to sign up for new users. */\n .site-header--container,\n/* Hides the top title banner bar appearing only in some stackexchange sites. */\n #hot-network-questions\n/* Hides hot network questions. */\n  {\n    display: none;\n  }",
+        "domains": [
+          "stackoverflow.com",
+          "stackexchange.com",
+          "superuser.com",
+          "serverfault.com",
+          "askubuntu.com"
+        ]
+      }
+    ],
+    "updateDate": 1677597388782,
+    "_id": "765396c1-f0bf-4769-8ad8-4e2bbf0efde8",
+    "_rev": 1677598086271,
+    "id": 11
+  },
+  {
+    "enabled": false,
+    "installDate": 1677677919080,
+    "name": "Default font override (All websites) ONLY Edge",
+    "sections": [
+      {
+        "code": "* {\n /*font-size: 100% !important;*/\n font-family: \"SF Pro Text\" !important;\n}",
+        "urlPrefixes": [
+          "https",
+          "http"
+        ]
+      }
+    ],
+    "updateDate": 1684243609215,
+    "_id": "e83b8e66-0b72-4fe6-a8d1-5ed319d09201",
+    "_rev": 1693034194172,
+    "exclusions": [
+      "https://outlook.office.com/*",
+      "https://www.netflix.com/*",
+      "https://virtualsm.glbinc.hpicorp.net/*",
+      "https://hp.sharepoint.com/*"
+    ],
+    "id": 13
+  }
+]
