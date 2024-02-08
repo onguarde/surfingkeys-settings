@@ -32,6 +32,7 @@
             "speed-minus",
             "speed",
             "speed-plus",
+            "screenshot",
             "options"
         ],
         "controlsvisible": true,
