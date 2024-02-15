@@ -9,6 +9,7 @@
       "exposeIframes": false,
       "exposeStyleName": false,
       "newStyleAsUsercss": false,
+      "styleViaASS": false,
       "styleViaXhr": false,
       "patchCsp": false,
       "urlInstaller": true,
@@ -16,8 +17,6 @@
       "schemeSwitcher.enabled": "dark",
       "schemeSwitcher.nightStart": "18:00",
       "schemeSwitcher.nightEnd": "06:00",
-      "popup.breadcrumbs": true,
-      "popup.breadcrumbs.usePath": false,
       "popup.enabledFirst": true,
       "popup.stylesFirst": true,
       "popup.autoResort": false,
@@ -38,6 +37,7 @@
       "manage.newUI.faviconsGray": true,
       "manage.newUI.targets": 3,
       "manage.newUI.sort": "title,asc",
+      "manage.searchMode": "meta",
       "editor.options": {},
       "editor.toc.expanded": true,
       "editor.options.expanded": true,
@@ -73,6 +73,7 @@
       "editor.appliesToLineWidget": true,
       "editor.autosaveDraft": 10,
       "editor.livePreview": true,
+      "editor.targetsFirst": true,
       "editor.colorpicker": true,
       "editor.colorpicker.hexUppercase": false,
       "editor.colorpicker.hotkey": "",
@@ -89,7 +90,11 @@
       "headerWidth.install": 280,
       "headerWidth.manage": 280,
       "popupWidth": 246,
-      "updateInterval": 24
+      "popupWidthMax": 280,
+      "updateInterval": 24,
+      "updateOnlyEnabled": false,
+      "popup.breadcrumbs": true,
+      "popup.breadcrumbs.usePath": false
     },
     "order": {
       "main": [],
@@ -99,17 +104,10 @@
   {
     "enabled": false,
     "updateUrl": "https://raw.githubusercontent.com/33kk/uso-archive/flomaster/data/usercss/146704.user.css",
-    "url": "https://33kk.github.io/uso-archive/?style=146704",
     "installDate": 1619582742623,
     "sections": [
       {
-        "code": "#hot-network-questions, /* not related to your work */\n.module.community-bulletin, /* never mind what's up on Meta */\n#chat-feature, /* no wasting your time in a semi-related chatroom */\n#footer-sites /* seriously, stop lookin gfor ways to waste your time */\n{\n  display: none;\n}\n\n/* Ads to join the site. */\n#herobox, .s-hero { display: none; }\n\n/* Ads for products. */\n.ad, .ad-container { display: none; }",
-        "start": 829,
-        "domains": [
-          "superuser.com",
-          "stackoverflow.com",
-          "stackexchange.com"
-        ]
+        "code": ""
       }
     ],
     "sourceCode": "/* ==UserStyle==\n@name           (Unused) Undistractify StackOverflow Enhanced\n@namespace      USO Archive\n@author         pmer\n@description    `Remove all the distracting stuff (other sites, chat rooms, meta posts, ads) from your vision, focusing in on resolving your technical problems first.Based on hardy tom’s original <a href=\"https://userstyles.org/styles/110637/undistractify-stackoverflow\">Undistractify StackOverflow</a> but adds removal of simple sidebar ads along with requests to join the site (for when you're signed out & don't want to bother signing in). Also adds more StackExchange domains that this style will apply to.`\n@version        20170817.3.3\n@license        CC0-1.0\n@preprocessor   uso\n==/UserStyle== */\n@-moz-document domain(\"superuser.com\"), domain(\"stackoverflow.com\"), domain(\"stackexchange.com\") {\n#hot-network-questions, /* not related to your work */\n.module.community-bulletin, /* never mind what's up on Meta */\n#chat-feature, /* no wasting your time in a semi-related chatroom */\n#footer-sites /* seriously, stop lookin gfor ways to waste your time */\n{\n  display: none;\n}\n\n/* Ads to join the site. */\n#herobox, .s-hero { display: none; }\n\n/* Ads for products. */\n.ad, .ad-container { display: none; }\n\n}",
@@ -125,26 +123,22 @@
     "author": "pmer",
     "description": "Remove all the distracting stuff (other sites, chat rooms, meta posts, ads) from your vision, focusing in on resolving your technical problems first.Based on hardy tom’s original <a href=\"https://userstyles.org/styles/110637/undistractify-stackoverflow\">Undistractify StackOverflow</a> but adds removal of simple sidebar ads along with requests to join the site (for when you're signed out & don't want to bother signing in). Also adds more StackExchange domains that this style will apply to.",
     "name": "(Unused) Undistractify StackOverflow Enhanced",
-    "installationUrl": "https://33kk.github.io/uso-archive/?style=146704",
     "originalDigest": "1c4d660305a949da121f882650be288ef4097e9f",
     "_id": "18ced6ca-c6b9-46a4-a9f3-87156a68ae8d",
     "_rev": 1677578271409,
     "id": 1,
     "etag": "W/\"c432ddb73c53584abb2312f4d1520d73a19c166a6c69c8ab108c93a87501842a\"",
-    "updateDate": 1620209046373
+    "updateDate": 1620209046373,
+    "url": "https://uso.kkx.one/style/146704",
+    "installationUrl": "https://uso.kkx.one/style/146704"
   },
   {
     "enabled": false,
     "updateUrl": "https://raw.githubusercontent.com/33kk/uso-archive/flomaster/data/usercss/161312.user.css",
-    "url": "https://33kk.github.io/uso-archive/?style=161312",
     "installDate": 1619582944312,
     "sections": [
       {
-        "code": "#left-sidebar {\n    display: none; \n}\n\n#sidebar {\n    display: none; \n}\n\n#footer {\n  display: none;\n}\n\n.started {\n  display: none;\n}\n\n.pl8 {\n    display: none;\n}\n\n#mainbar {\n    width: 100%;\n}",
-        "start": 323,
-        "domains": [
-          "stackoverflow.com"
-        ]
+        "code": ""
       }
     ],
     "sourceCode": "/* ==UserStyle==\n@name           (Unused) Remove sidebars and footer.\n@namespace      USO Archive\n@author         Alejandro Ramirez\n@description    `Remove sidebars and footer.`\n@version        20180613.18.25\n@license        NO-REDISTRIBUTION\n@preprocessor   uso\n==/UserStyle== */\n@-moz-document domain(stackoverflow.com) {\n\n#left-sidebar {\n    display: none; \n}\n\n#sidebar {\n    display: none; \n}\n\n#footer {\n  display: none;\n}\n\n.started {\n  display: none;\n}\n\n.pl8 {\n    display: none;\n}\n\n#mainbar {\n    width: 100%;\n}\n\n}",
@@ -160,13 +154,14 @@
     "author": "Alejandro Ramirez",
     "description": "Remove sidebars and footer.",
     "name": "(Unused) Remove sidebars and footer.",
-    "installationUrl": "https://33kk.github.io/uso-archive/?style=161312",
     "originalDigest": "4f49d332e8024c0e5cd4d39e95b9228cf07856e9",
     "_id": "fd50cd3d-78e0-48ae-abdf-93b907c24c06",
     "_rev": 1677578271483,
     "id": 2,
     "etag": "W/\"13a59d6581f06ffb0fb844680bda568c631cb819f2cd9da4c299df73502a18b4\"",
-    "updateDate": 1620208996296
+    "updateDate": 1620208996296,
+    "url": "https://uso.kkx.one/style/161312",
+    "installationUrl": "https://uso.kkx.one/style/161312"
   },
   {
     "enabled": true,
@@ -363,7 +358,7 @@
     ],
     "updateDate": 1684243609215,
     "_id": "e83b8e66-0b72-4fe6-a8d1-5ed319d09201",
-    "_rev": 1693034194172,
+    "_rev": 1707917367542,
     "exclusions": [
       "https://outlook.office.com/*",
       "https://www.netflix.com/*",
