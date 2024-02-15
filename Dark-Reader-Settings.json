@@ -1,4 +1,5 @@
 {
+    "schemeVersion": 2,
     "enabled": true,
     "fetchNews": false,
     "theme": {
@@ -25,11 +26,14 @@
     },
     "presets": [],
     "customThemes": [],
-    "siteList": [],
-    "siteListEnabled": [
-        "stackoverflow.com"
+    "enabledByDefault": true,
+    "enabledFor": [
+        "stackoverflow.com",
+        "thundie.wordpress.com",
+        "nekosdrama.wordpress.com",
+        "old.reddit.com"
     ],
-    "applyToListedOnly": false,
+    "disabledFor": [],
     "changeBrowserTheme": false,
     "syncSettings": true,
     "syncSitesFixes": true,
