@@ -1,6 +1,10 @@
 {
     "schemeVersion": 2,
+<<<<<<< Updated upstream
     "enabled": true,
+=======
+    "enabled": false,
+>>>>>>> Stashed changes
     "fetchNews": false,
     "theme": {
         "mode": 1,
@@ -8,12 +12,12 @@
         "contrast": 100,
         "grayscale": 10,
         "sepia": 0,
-        "useFont": false,
-        "fontFamily": "Segoe UI",
+        "useFont": true,
+        "fontFamily": "Inter",
         "textStroke": 0,
         "engine": "dynamicTheme",
         "stylesheet": "",
-        "darkSchemeBackgroundColor": "#181a1b",
+        "darkSchemeBackgroundColor": "#282b36",
         "darkSchemeTextColor": "#e8e6e3",
         "lightSchemeBackgroundColor": "#dcdad7",
         "lightSchemeTextColor": "#181a1b",
@@ -21,10 +25,11 @@
         "selectionColor": "auto",
         "styleSystemControls": false,
         "lightColorScheme": "Default",
-        "darkColorScheme": "Default",
+        "darkColorScheme": "Dracula",
         "immediateModify": false
     },
     "presets": [],
+<<<<<<< Updated upstream
     "customThemes": [],
     "enabledByDefault": true,
     "enabledFor": [
@@ -34,13 +39,73 @@
         "old.reddit.com"
     ],
     "disabledFor": [],
+=======
+    "customThemes": [
+        {
+            "theme": {
+                "mode": 1,
+                "brightness": 100,
+                "contrast": 100,
+                "grayscale": 10,
+                "sepia": 0,
+                "useFont": true,
+                "fontFamily": "SF Pro Text",
+                "textStroke": 0,
+                "engine": "staticTheme",
+                "stylesheet": "",
+                "darkSchemeBackgroundColor": "#181a1b",
+                "darkSchemeTextColor": "#e8e6e3",
+                "lightSchemeBackgroundColor": "#dcdad7",
+                "lightSchemeTextColor": "#181a1b",
+                "scrollbarColor": "auto",
+                "selectionColor": "auto",
+                "styleSystemControls": false,
+                "lightColorScheme": "Default",
+                "darkColorScheme": "Default",
+                "immediateModify": false
+            },
+            "url": [
+                "ticktick.com"
+            ]
+        }
+    ],
+    "enabledByDefault": true,
+    "enabledFor": [],
+    "disabledFor": [
+        "mail.google.com",
+        "outlook.office.com",
+        "app.powerbi.com",
+        "sp79w0294g.sg.hpicorp.net",
+        "sg.mysunnystep.com",
+        "hp-my.sharepoint.com",
+        "hp.sharepoint.com",
+        "hp.zoom.us",
+        "www.m1.com.sg",
+        "todoist.com",
+        "localhost:26769",
+        "directoryworks.hpicorp.net",
+        "elt.oup.com",
+        "wordfinder.yourdictionary.com",
+        "s74w0272.my.hpicorp.net",
+        "stackoverflow.hp.dev",
+        "s74w0273.my.hpicorp.net",
+        "www.alsagoff.edu.sg",
+        "sms.learnislam.sg",
+        "gw2.mcpayment.net",
+        "content-na2prd0004-na2hp.sabacloud.com",
+        "hpi.sabacloud.com",
+        "docs.google.com",
+        "login.external.hp.com",
+        "epam-prod.corp.hpicloud.net"
+    ],
+>>>>>>> Stashed changes
     "changeBrowserTheme": false,
     "syncSettings": true,
     "syncSitesFixes": true,
     "automation": {
-        "enabled": false,
-        "mode": "",
-        "behavior": "OnOff"
+        "behavior": "OnOff",
+        "enabled": true,
+        "mode": "system"
     },
     "time": {
         "activation": "18:00",
@@ -55,10 +120,10 @@
     "enableForProtectedPages": false,
     "enableContextMenus": false,
     "detectDarkTheme": true,
-    "readNews": [
+    "displayedNews": [
         "news-2023"
     ],
-    "displayedNews": [
+    "readNews": [
         "news-2023"
     ]
 }
