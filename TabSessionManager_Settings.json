@@ -30,7 +30,7 @@
   "isSessionListOpenInTab": false,
   "theme": "dark",
   "popupWidthV2": 700,
-  "popupHeight": 500,
+  "popupHeight": "500",
   "sidebarWidth": 300,
   "dateFormat": "YYYY.MM.DD HH:mm:ss",
   "truncateTitle": true,
