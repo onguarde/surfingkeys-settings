@@ -1,3 +1,4 @@
+// 
 // this works,
 // settings.blocklistPattern = /.*mail\.google\.com.*|.*catanuniverse\.com.*|.*gist\.github\.com.*|.*excel\.officeapps\.live\.com.*|.*hp\.sharepoint\.com.*/
 
