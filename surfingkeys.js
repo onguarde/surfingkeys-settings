@@ -10,9 +10,10 @@ function createBlocklistPattern(urls) {
 
 const urlList = [
     'mail.google.com',
-    'catanuniverse.com',
+    'office.com',
     'excel.officeapps.live.com',
-    'hp.sharepoint.com'
+    'hp.sharepoint.com',
+    'catanuniverse.com'
 ];
 
 settings.blocklistPattern = createBlocklistPattern(urlList);
