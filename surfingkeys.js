@@ -1,4 +1,27 @@
-// https://github.com/brookhong/Surfingkeys/wiki/Migrate-your-settings-from-0.9.74-to-1.0
+// this works,
+// settings.blocklistPattern = /.*mail\.google\.com.*|.*catanuniverse\.com.*|.*gist\.github\.com.*|.*excel\.officeapps\.live\.com.*|.*hp\.sharepoint\.com.*/
+
+function createBlocklistPattern(urls) {
+    const escapedPatterns = urls.map(url => 
+        `.*${url.replace(/\./g, '\\.')}.*`
+    );
+    return new RegExp(escapedPatterns.join('|'));
+}
+
+const urlList = [
+    'mail.google.com',
+    'catanuniverse.com',
+    'excel.officeapps.live.com',
+    'hp.sharepoint.com'
+];
+
+settings.blocklistPattern = createBlocklistPattern(urlList);
+
+// does not work,
+// settings.blacklistPattern = /.*mail.google.com.*|.*inbox.google.com.*|trello.com|duolingo.com|youtube.com|udemy.com|localhost/i;
+// settings.blocklistPattern = /((calendar|mail).google|trello|duolingo|youtube|udemy).com/i
+
+
 const {
     aceVimMap,
     mapkey,
