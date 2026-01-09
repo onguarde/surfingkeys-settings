@@ -40,3 +40,5 @@ user_pref("services.sync.prefs.dangerously_allow_arbitrary", true);
 user_pref("services.sync.prefs.sync-seen.browser.formfill.enable", true);
 user_pref("app.update.silent", true);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+// firefox border web content, bug 
+user_pref("privacy.fingerprintingProtection", false);
