@@ -1,24 +1,21 @@
-// 
+// blocklist, disable surfingkeys on all these sites (outlook, gmail etc.)
 // this works,
 // settings.blocklistPattern = /.*mail\.google\.com.*|.*catanuniverse\.com.*|.*gist\.github\.com.*|.*excel\.officeapps\.live\.com.*|.*hp\.sharepoint\.com.*/
-
 function createBlocklistPattern(urls) {
     const escapedPatterns = urls.map(url => 
         `.*${url.replace(/\./g, '\\.')}.*`
     );
     return new RegExp(escapedPatterns.join('|'));
 }
-
 const urlList = [
     'mail.google.com',
+    'outlook.live.com',
     'office.com',
     'excel.officeapps.live.com',
     'hp.sharepoint.com',
     'catanuniverse.com'
 ];
-
 settings.blocklistPattern = createBlocklistPattern(urlList);
-
 // does not work,
 // settings.blacklistPattern = /.*mail.google.com.*|.*inbox.google.com.*|trello.com|duolingo.com|youtube.com|udemy.com|localhost/i;
 // settings.blocklistPattern = /((calendar|mail).google|trello|duolingo|youtube|udemy).com/i
