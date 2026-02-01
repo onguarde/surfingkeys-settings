@@ -70,33 +70,35 @@ if( /^(.*\.)?google\./.test(window.location.host) ){
     unmap('/');
 }
 
+// remap reddit search
+// map("sr", "sre")
 
 // open 1 link (and close hints)
-map('w', 'f');  // open 1 link in current tab (f)
-map('W', 'q');  // open 1 image link in current tab (q)
+// map('w', 'f');  // open 1 link in current tab (f)
+// map('W', 'q');  // open 1 image link in current tab (q)
 
 // open 1 link in background (and close hints)
-map('q', 'gf');  // open 1 link in background tab (gf/C)
-// (??) open 1 image link in background tab (skipped rarely used)
+// map('q', 'gf');  // open 1 link in background tab (gf/C)
+// open 1 image link in background tab (skipped rarely used), eg. google images show hints only on the images
 
 // open multiple links (don't close hints)
-map('a', 'cf');  // open links in background tab (cf)
+// map('a', 'cf');  // open links in background tab (cf)
 // open multiple image links in background tab (in development - doesn't work) (skipped rarely used)
 // mapkey('A', '#1Click on an Image or a button in background, multiple', function () {
 //     Hints.create("img, button", Hints.dispatchMouseClick, { multipleHits: true, tabbed: true, active: false });
 // });
 
-map('f', 'd');  // scroll page down
-map('d', 'e');  // scroll page up
+// map('f', 'd');  // scroll page down
+// map('d', 'e');  // scroll page up
 
-map('e', 'E');  // previous tab  // overrides reload
-map('r', 'R');  // next tab  // overrides open link in current tab (f)
+// map('e', 'E');  // previous tab  // overrides reload
+// map('r', 'R');  // next tab  // overrides open link in current tab (f)
 
 map('<Alt-shift-s>', '<Alt-s>');  // disable current site // alt s is mapped externally in browser to undo close tab
 
 
 mapkey(';j', '#12Close Downloads Shelf', function() {  // prevent default clearing history for download shelf https://github.com/brookhong/Surfingkeys/issues/1408
-    RUNTIME("closeDownloadsShelf");
+    RUNTIME("closeDownloadsShelf"); 
 });
 // rarely use this though, only effect the popup menu close. gd - Open Chrome Downloads (but not the popup, no way to open popup in edge browser)
 
@@ -151,6 +153,35 @@ settings.theme = `
 }`;
 // click `Save` button to make above settings to take effect.</ctrl-i></ctrl-y>
 
+// ;s to disable surfingkeys eac time, p , set this in surfignkeys config to disable permanently
+settings.noPdfViewer=true;
+
+// custom search "sd"
+// https://github.com/brookhong/Surfingkeys/blob/master/docs/API.md#parameters-12 (api docs)
+
+// addSearchAlias('d', 'duckduckgo', 'https://duckduckgo.com/?q=', 's', 'https://duckduckgo.com/ac/?q=', function(response) {
+//     var res = JSON.parse(response.text);
+//     return res.map(function(r){
+//         return r.phrase;
+//     });
+// });
+
+// custom search "sr"
+addSearchAlias('r', 'reddit', 'https://www.google.com/search?udm=14&q=reddit+', 's', 'https://www.google.com/search?udm=14&q=reddit+', function(response) {
+    var res = JSON.parse(response.text);
+    return res.map(function(r){
+        return r.phrase;
+    });
+});
+
+// https://gitlab.com/-/snippets/1970642 
+// [INFO] Search in Google Books:
+api.addSearchAlias("b", "Google Books", "https://www.google.com/search?tbm=bks&q=");
+// [INFO] Search colored images in Google Images:
+api.addSearchAlias("i", "Google Images (Colored)", "https://www.google.com/search?tbm=isch&tbs=imgo:1,ic:color&q=");
+// [INFO] Search in Yandex:
+api.addSearchAlias("x", "Yandex", "https://yandex.ru/search/?text=");
+
 
 //
 // default help reference
@@ -174,4 +205,3 @@ settings.theme = `
 
 // only keep E, R and T from Surfingkeys for gmail.com and twitter.com
 //unmapAllExcept(['E','R','T'], /gmail.com|twitter.com/);
-
