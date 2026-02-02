@@ -63,6 +63,10 @@ unmapAllExcept([
 // unmap('<Ctrl-h>');  // history panel 
 // unmap('<Ctrl-j>');  // downloads panel 
 
+// only keep E, R and T from Surfingkeys for gmail.com and twitter.com
+// api.unmapAllExcept(['E','R','T'], /youtube.com|twitter.com/);
+api.unmapAllExcept(['e','d','x','sg','sy','sr'], /youtube.com/);
+
 // disable find on google, so by default google '/' will go to search box
 if( /^(.*\.)?google\./.test(window.location.host) ){
     unmap('/');
