@@ -44,6 +44,7 @@ const {
     RUNTIME
 } = api;
 
+// only enable the ones that are using, so the rest will pass through
 unmapAllExcept([
     'p','?',';ql','.',      // help
     'gi','gf','[[',']]',';fs','O','f','af','C','i','I','<Ctrl-i>','q','w','cf',         // Mouse click
@@ -67,9 +68,6 @@ if( /^(.*\.)?google\./.test(window.location.host) ){
     unmap('/');
 }
 
-// remap reddit search
-// map("sr", "sre")
-
 // open 1 link (and close hints)
 // map('w', 'f');  // open 1 link in current tab (f)
 // map('W', 'q');  // open 1 image link in current tab (q)
@@ -91,8 +89,16 @@ if( /^(.*\.)?google\./.test(window.location.host) ){
 // map('e', 'E');  // previous tab  // overrides reload
 // map('r', 'R');  // next tab  // overrides open link in current tab (f)
 
-map('<Alt-shift-s>', '<Alt-s>');  // disable current site // alt s is mapped externally in browser to undo close tab
-
+// issue, we want to override default alt-s, used to disable surfingkeys on site temporarily. remap to alt-shift-s
+// seems not possible, use autohotkey workaround.
+// note: to exclude the sites permanently, add it to to blacklist on top
+//
+// https://github.com/brookhong/Surfingkeys/issues/1430 (not working)
+// https://github.com/brookhong/Surfingkeys/issues/1776 (not working)
+// 
+// relevant autohotkey workaround
+// ; Surfingkeys extension - because cannot remap hardcoded need to do it here
+// ^!s:: Send !s  ; ctrl alt s, not ctrl shift s
 
 mapkey(';j', '#12Close Downloads Shelf', function() {  // prevent default clearing history for download shelf https://github.com/brookhong/Surfingkeys/issues/1408
     RUNTIME("closeDownloadsShelf"); 
@@ -102,67 +108,66 @@ mapkey(';j', '#12Close Downloads Shelf', function() {  // prevent default cleari
 
 // darkreader extension compatbility - hints visibility
 // https://github.com/brookhong/Surfingkeys/issues/1654
-api.Hints.style(
-    "padding: 1px; color:#efe1eb; background: none; background-color: #b16286"
-);
-api.Hints.style(
-    "div{color:#efe1eb; background: none; background-color: #e78a4e;} div.begin{color:#ea6962;}",
-    "text"
-);
+// api.Hints.style(
+//     "padding: 1px; color:#efe1eb; background: none; background-color: #b16286"
+// );
+// api.Hints.style(
+//     "div{color:#efe1eb; background: none; background-color: #e78a4e;} div.begin{color:#ea6962;}",
+//     "text"
+// );
 
 // set theme
-settings.theme = `
-.sk_theme {
-    font-family: Input Sans Condensed, Charcoal, sans-serif;
-    font-size: 10pt;
-    background: #24272e;
-    color: #abb2bf;
-}
-.sk_theme tbody {
-    color: #fff;
-}
-.sk_theme input {
-    color: #d0d0d0;
-}
-.sk_theme .url {
-    color: #61afef;
-}
-.sk_theme .annotation {
-    color: #56b6c2;
-}
-.sk_theme .omnibar_highlight {
-    color: #528bff;
-}
-.sk_theme .omnibar_timestamp {
-    color: #e5c07b;
-}
-.sk_theme .omnibar_visitcount {
-    color: #98c379;
-}
-.sk_theme #sk_omnibarSearchResult ul li:nth-child(odd) {
-    background: #303030;
-}
-.sk_theme #sk_omnibarSearchResult ul li.focused {
-    background: #3e4452;
-}
-#sk_status, #sk_find {
-    font-size: 20pt;
-}`;
+// settings.theme = `
+// .sk_theme {
+//     font-family: Input Sans Condensed, Charcoal, sans-serif;
+//     font-size: 10pt;
+//     background: #24272e;
+//     color: #abb2bf;
+// }
+// .sk_theme tbody {
+//     color: #fff;
+// }
+// .sk_theme input {
+//     color: #d0d0d0;
+// }
+// .sk_theme .url {
+//     color: #61afef;
+// }
+// .sk_theme .annotation {
+//     color: #56b6c2;
+// }
+// .sk_theme .omnibar_highlight {
+//     color: #528bff;
+// }
+// .sk_theme .omnibar_timestamp {
+//     color: #e5c07b;
+// }
+// .sk_theme .omnibar_visitcount {
+//     color: #98c379;
+// }
+// .sk_theme #sk_omnibarSearchResult ul li:nth-child(odd) {
+//     background: #303030;
+// }
+// .sk_theme #sk_omnibarSearchResult ul li.focused {
+//     background: #3e4452;
+// }
+// #sk_status, #sk_find {
+//     font-size: 20pt;
+// }`;
 // click `Save` button to make above settings to take effect.</ctrl-i></ctrl-y>
 
-// ;s to disable surfingkeys eac time, p , set this in surfignkeys config to disable permanently
+// pdf reader, ;s to disable surfingkeys each time, to disable permanently,
+// but actually we want to use it, easy up/down pages, but now we're using a totally external pdf reader, which is what you're used to 
 settings.noPdfViewer=true;
 
 // custom search "sd"
 // https://github.com/brookhong/Surfingkeys/blob/master/docs/API.md#parameters-12 (api docs)
-
 // addSearchAlias('d', 'duckduckgo', 'https://duckduckgo.com/?q=', 's', 'https://duckduckgo.com/ac/?q=', function(response) {
 //     var res = JSON.parse(response.text);
 //     return res.map(function(r){
 //         return r.phrase;
 //     });
 // });
-
 // custom search "sr"
 addSearchAlias('r', 'reddit', 'https://www.google.com/search?udm=14&q=reddit+', 's', 'https://www.google.com/search?udm=14&q=reddit+', function(response) {
     var res = JSON.parse(response.text);
@@ -170,7 +175,6 @@ addSearchAlias('r', 'reddit', 'https://www.google.com/search?udm=14&q=reddit+', 
         return r.phrase;
     });
 });
-
 // https://gitlab.com/-/snippets/1970642 
 // [INFO] Search in Google Books:
 api.addSearchAlias("b", "Google Books", "https://www.google.com/search?tbm=bks&q=");

@@ -1,0 +1,10 @@
+/* https://old.reddit.com/r/vivaldibrowser/comments/byivxc/how_to_hide_the_loading_progress_numbers_on_the/ */
+.pageload.progressing {
+    display: none;
+}
+
+/* https://forum.vivaldi.net/topic/79298/allow-hiding-the-bookmark-and-reader-view-icons-from-the-address-bar/3 */
+.UrlBar-AddressField .BookmarkButton,
+.UrlBar-AddressField .ToolbarButton-Button[title^="Reader"] {
+	display: none;
+}
